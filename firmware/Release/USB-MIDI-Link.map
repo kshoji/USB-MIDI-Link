@@ -1,0 +1,499 @@
+Archive member included because of file (symbol)
+
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o (exit)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+                              ./src/usbdrv.o (__do_copy_data)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+                              ./src/main.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+usbTxBuf            0xb               ./src/usbdrv.o
+usbTxStatus1        0xc               ./src/usbdrv.o
+usbDeviceAddr       0x1               ./src/usbdrv.o
+usbRxToken          0x1               ./src/usbdrv.o
+usbInputBufOffset   0x1               ./src/usbdrv.o
+usbMsgPtr           0x2               ./src/usbdrv.o
+usbRxLen            0x1               ./src/usbdrv.o
+usbNewDeviceAddr    0x1               ./src/usbdrv.o
+usbCurrentTok       0x1               ./src/usbdrv.o
+usbConfiguration    0x1               ./src/usbdrv.o
+usbRxBuf            0x16              ./src/usbdrv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+LOAD ./src/main.o
+LOAD ./src/oddebug.o
+LOAD ./src/usbdrv.o
+LOAD ./src/usbdrvasm.o
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/libm.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/libc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x7b0
+ *(.vectors)
+ .vectors       0x00000000       0x26 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000026       0x77 ./src/main.o
+ .progmem.data  0x0000009d       0x2a ./src/usbdrv.o
+                0x0000009d                usbDescriptorString0
+                0x000000a1                usbDescriptorStringVendor
+                0x000000b5                usbDescriptorStringDevice
+                0x000000c8                . = ALIGN (0x2)
+ *fill*         0x000000c7        0x1 00
+                0x000000c8                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000c8        0x0 linker stubs
+ *(.trampolines*)
+                0x000000c8                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000c8                __ctors_start = .
+ *(.ctors)
+                0x000000c8                __ctors_end = .
+                0x000000c8                __dtors_start = .
+ *(.dtors)
+                0x000000c8                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000c8        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+                0x000000c8                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000c8        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000d0       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+                0x000000d0                __do_copy_data
+ .init4         0x000000e6       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+                0x000000e6                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000f6        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+ *(.init9)
+ *(.text)
+ .text          0x000000fa        0x2 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+                0x000000fa                __vector_12
+                0x000000fa                __bad_interrupt
+                0x000000fa                __vector_6
+                0x000000fa                __vector_3
+                0x000000fa                __vector_11
+                0x000000fa                __vector_13
+                0x000000fa                __vector_17
+                0x000000fa                __vector_7
+                0x000000fa                __vector_5
+                0x000000fa                __vector_4
+                0x000000fa                __vector_9
+                0x000000fa                __vector_2
+                0x000000fa                __vector_15
+                0x000000fa                __vector_8
+                0x000000fa                __vector_14
+                0x000000fa                __vector_10
+                0x000000fa                __vector_16
+                0x000000fa                __vector_18
+ .text          0x000000fc      0x152 ./src/main.o
+                0x0000017c                usbFunctionWriteOut
+                0x000000fc                usbFunctionDescriptor
+                0x00000180                parseSerialMidiMessage
+                0x00000124                usbFunctionSetup
+                0x000001c4                main
+                0x00000140                parseUSBMidiMessage
+                0x00000128                usbFunctionRead
+                0x0000013c                usbFunctionWrite
+ .text          0x0000024e        0x0 ./src/oddebug.o
+ .text          0x0000024e      0x2e4 ./src/usbdrv.o
+                0x000002b2                usbPoll
+                0x00000268                usbSetInterrupt
+                0x0000024e                usbInit
+ .text          0x00000532      0x27a ./src/usbdrvasm.o
+                0x00000564                __vector_1
+                0x00000532                usbCrc16
+                0x0000055c                usbCrc16Append
+ .text          0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+ .text          0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+ .text          0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+                0x000007ac                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+ .text.libgcc   0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc   0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+                0x000007ac                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000007ac        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+                0x000007ac                exit
+                0x000007ac                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000007ac        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000007b0                _etext = .
+
+.data           0x00800060        0x2 load address 0x000007b0
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+ .data          0x00800060        0x0 ./src/main.o
+ .data          0x00800060        0x0 ./src/oddebug.o
+ .data          0x00800060        0x2 ./src/usbdrv.o
+                0x00800060                usbTxLen
+ .data          0x00800062        0x0 ./src/usbdrvasm.o
+ .data          0x00800062        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+ .data          0x00800062        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+ .data          0x00800062        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800062                . = ALIGN (0x2)
+                0x00800062                _edata = .
+                0x00800062                PROVIDE (__data_end, .)
+
+.bss            0x00800062       0x6b
+                0x00800062                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800062        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+ .bss           0x00800062       0x34 ./src/main.o
+ .bss           0x00800096        0x0 ./src/oddebug.o
+ .bss           0x00800096        0x1 ./src/usbdrv.o
+ .bss           0x00800097        0x0 ./src/usbdrvasm.o
+ .bss           0x00800097        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+ .bss           0x00800097        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+ .bss           0x00800097        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800097       0x36 ./src/usbdrv.o
+                0x00800097                usbTxBuf
+                0x008000a2                usbTxStatus1
+                0x008000ae                usbDeviceAddr
+                0x008000af                usbRxToken
+                0x008000b0                usbInputBufOffset
+                0x008000b1                usbMsgPtr
+                0x008000b3                usbRxLen
+                0x008000b4                usbNewDeviceAddr
+                0x008000b5                usbCurrentTok
+                0x008000b6                usbConfiguration
+                0x008000b7                usbRxBuf
+                0x008000cd                PROVIDE (__bss_end, .)
+                0x000007b0                __data_load_start = LOADADDR (.data)
+                0x000007b2                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000cd        0x0
+                0x008000cd                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000cd                PROVIDE (__noinit_end, .)
+                0x008000cd                _end = .
+                0x008000cd                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x69c
+ *(.stab)
+ .stab          0x00000000      0x69c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+
+.stabstr        0x00000000       0x82
+ *(.stabstr)
+ .stabstr       0x00000000       0x82 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(USB-MIDI-Link.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__bad_interrupt                                   /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__bss_end                                         /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+__data_start                                      /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_clear_bss.o)
+                                                  ./src/usbdrv.o
+                                                  ./src/main.o
+__do_copy_data                                    /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_copy_data.o)
+                                                  ./src/usbdrv.o
+__heap_end                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__init                                            /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__stack                                           /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_1                                        ./src/usbdrvasm.o
+                                                  /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_10                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_11                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_12                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_13                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_14                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_15                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_16                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_17                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_18                                       /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_2                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_3                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_4                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_5                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_6                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_7                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_8                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_9                                        /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vector_default                                  /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+__vectors                                         /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+_exit                                             /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+exit                                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avr25/libgcc.a(_exit.o)
+                                                  /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+main                                              ./src/main.o
+                                                  /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avr25/crttn2313.o
+parseSerialMidiMessage                            ./src/main.o
+parseUSBMidiMessage                               ./src/main.o
+usbConfiguration                                  ./src/usbdrv.o
+usbCrc16                                          ./src/usbdrvasm.o
+usbCrc16Append                                    ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbCurrentTok                                     ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbDescriptorString0                              ./src/usbdrv.o
+usbDescriptorStringDevice                         ./src/usbdrv.o
+usbDescriptorStringVendor                         ./src/usbdrv.o
+usbDeviceAddr                                     ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbFunctionDescriptor                             ./src/main.o
+                                                  ./src/usbdrv.o
+usbFunctionRead                                   ./src/main.o
+                                                  ./src/usbdrv.o
+usbFunctionSetup                                  ./src/main.o
+                                                  ./src/usbdrv.o
+usbFunctionWrite                                  ./src/main.o
+                                                  ./src/usbdrv.o
+usbFunctionWriteOut                               ./src/main.o
+                                                  ./src/usbdrv.o
+usbInit                                           ./src/usbdrv.o
+                                                  ./src/main.o
+usbInputBufOffset                                 ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbMsgPtr                                         ./src/usbdrv.o
+                                                  ./src/main.o
+usbNewDeviceAddr                                  ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbPoll                                           ./src/usbdrv.o
+                                                  ./src/main.o
+usbRxBuf                                          ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbRxLen                                          ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbRxToken                                        ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbSetInterrupt                                   ./src/usbdrv.o
+                                                  ./src/main.o
+usbTxBuf                                          ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+usbTxLen                                          ./src/usbdrv.o
+                                                  ./src/usbdrvasm.o
+usbTxStatus1                                      ./src/usbdrvasm.o
+                                                  ./src/usbdrv.o
+                                                  ./src/main.o
