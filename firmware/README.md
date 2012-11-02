@@ -33,5 +33,5 @@ FUSEL = 0xef
 
 License
 -------
-[Apache License, Version 2.0][Apache]
-[Apache]: http://www.apache.org/licenses/LICENSE-2.0
+[GNU General Public License Version 2 (GPL)][GPL2]
+[GPL2]: http://www.gnu.org/licenses/gpl-2.0.html
